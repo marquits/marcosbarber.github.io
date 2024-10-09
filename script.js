@@ -4,7 +4,7 @@ console.log(apellido);
 alert("Bienvenido a" + nombre + apellido);
 var look = prompt("¿Estas en buscas de un buen look?");
 
-if ((look = si)) {
+if (look == si) {
   // if = si para preguntar
   alert("Perfecto!");
 } else {
