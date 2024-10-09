@@ -1,0 +1,104 @@
+body {
+  background: rgb(0, 22, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 22, 255, 0.4963235294117647) 0%,
+    rgba(253, 29, 29, 0.5019257703081232) 50%,
+    rgba(255, 255, 255, 0.499124649859944) 100%
+  );
+}
+
+header {
+  text-align: center;
+  background: rgb(255, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#IMAGEN_LOGO {
+  width: 30px;
+  height: 24px;
+}
+
+.carousel-item img {
+  display: block;
+  margin: 0 auto; /* Centra las imágenes horizontalmente */
+  max-width: 100%; /* Asegura que no se desborden del carrusel */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+.carousel {
+  max-width: 600px; /* Ajusta el ancho máximo del carrusel */
+  margin: 0 auto; /* Centra el carrusel */
+}
+
+@media (max-width: 768px) {
+  #carouselExampleCaptions {
+    width: 100%; /* Para dispositivos móviles */
+  }
+}
+
+#horarios {
+  margin-bottom: 15px; /* Espacio inferior para el título */
+  margin-top: var(--main-padding); /* Espacio superior unificado */
+  width: 100%; /* Ancho completo para flexibilidad */
+  width: 250px; /* Ajusta el ancho según sea necesario */
+  max-width: 300px; /* Ajusta el ancho según sea necesario */
+  margin: 0; /* Sin márgenes en móviles */
+  margin-top: 20px; /* Espacio en la parte superior para móviles */
+}
+
+.container-horario-turno {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container-horario-turno section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-horario-turno {
+    flex-direction: column;
+  }
+}
+
+#ubicacion {
+  margin: 0 auto; /* Centra la sección */
+  padding: var(--main-padding); /* Espacio interno unificado */
+  max-width: 1000px; /* Ancho máximo para la sección */
+}
+
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+}
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  margin: 0;
+  background: rgb(255, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
