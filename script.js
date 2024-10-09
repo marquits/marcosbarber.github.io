@@ -1,7 +1,7 @@
 var nombre = "Marcos "; // tipo de variable
 let apellido = "Barber "; // tipo de variable
 console.log(apellido);
-alert("Bienvenido a" + nombre + apellido);
+alert("Bienvenido a " + nombre + apellido);
 var look = prompt("¿Estas en buscas de un buen look?");
 
 if (look == "si") {
