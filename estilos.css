@@ -28,6 +28,19 @@ header {
   height: 24px;
 }
 
+#parrafito {
+  border: solid
+    radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: rgb(255, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-size: 25px;
+  color: white;
+}
+
 .carousel-item img {
   display: block;
   margin: 0 auto; /* Centra las imágenes horizontalmente */
