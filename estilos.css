@@ -41,6 +41,11 @@ header {
   color: white;
 }
 
+.content-container {
+  width: 95%;
+  margin: auto;
+}
+
 .carousel-item img {
   display: block;
   margin: 0 auto; /* Centra las imágenes horizontalmente */
