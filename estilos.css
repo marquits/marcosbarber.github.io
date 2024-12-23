@@ -1,122 +1,194 @@
 body {
-  background: rgb(0, 22, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 22, 255, 0.4963235294117647) 0%,
-    rgba(253, 29, 29, 0.5019257703081232) 50%,
-    rgba(255, 255, 255, 0.499124649859944) 100%
-  );
+  margin: 0; /* Elimina márgenes por defecto */
+  font-family: Arial, sans-serif;
+  color: white; /* Asegura texto legible sobre el fondo */
+  text-align: center;
+  padding: 20px;
 }
 
-header {
-  text-align: center;
-  background: rgb(255, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  font-family: "Cinzel", serif;
-  font-size: 36px;
+#fondo {
+  background-image: url("img/fondo.jpg"); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo */
+  background-repeat: no-repeat; /* Evita el mosaico */
+  background-attachment: fixed; /* Fondo fijo */
+  background-position: center; /* Centra la imagen */
+  position: fixed; /* Fija el fondo detrás de todo */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  height: 100vh; /* Ocupa todo el alto de la pantalla */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%; /* Ocupa todo el ancho de la página */
+  background-color: #333; /* Color de fondo */
+  padding: 10px 0; /* Espaciado interno superior e inferior */
+  position: fixed; /* La barra se queda fija al hacer scroll */
+  top: 0; /* Posición en la parte superior */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.navbar img #IMAGEN_LOGO {
+  height: 50px; /* Tamaño del logo */
+  margin-right: 20px; /* Separación del logo con los botones */
+}
+
+/* Estilo de la lista */
+.navbar-nav {
+  display: flex; /* Alineación horizontal */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-around; /* Espaciado uniforme entre elementos */
+  width: 100%; /* Asegura que los botones ocupen todo el ancho */
   margin: 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  padding: 0;
+}
+
+.nav-item {
+  flex-grow: 1; /* Los elementos crecen para ocupar todo el espacio */
+  text-align: center; /* Centra el texto en cada botón */
+}
+
+.nav-link {
+  font-size: 18px; /* Tamaño de la fuente */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 15px; /* Espaciado interno */
+  background-color: #444; /* Color de fondo inicial */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Animación al pasar el ratón */
+}
+
+.nav-link:hover {
+  background-color: rgb(254, 254, 127); /* Color de fondo al pasar el ratón */
+  color: #444444; /* Color del texto al pasar el ratón */
+  transform: scale(1.09); /* Aumenta ligeramente el tamaño */
+}
+
+/* Dropdown menú */
+.dropdown-menu {
+  background-color: #444444; /* Fondo del dropdown */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.dropdown-item {
+  font-size: 16px; /* Tamaño del texto en dropdown */
+  color: white; /* Color del texto */
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(254, 254, 127); /* Fondo al pasar el ratón */
+  transform: scale(1.09); /* Aumenta ligeramente el tamaño */
+}
+
+/* Botón de menú desplegable en pantallas pequeñas */
+.navbar-toggler {
+  background-color: #444; /* Color del botón */
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #999999; /* Color del icono */
+}
+
+/* Margen y alineación */
+.container-fluid {
+  max-width: 100%; /* Asegura que ocupe todo el ancho */
+  padding: 0 20px; /* Espaciado lateral */
+}
+
+/* Espaciado con el contenido principal */
+body {
+  margin-top: 80px; /* Ajusta este valor según la altura de tu barra */
+}
+
+#titulo {
+  background: repeating-linear-gradient(
+    45deg,
+    /* Ángulo de las rayas */ rgba(255, 0, 0, 0.3),
+    /* Rojo semi-transparente */ rgba(255, 0, 0, 0.3) 10px,
+    /* Fin del tramo rojo */ rgba(255, 255, 255, 0.3) 10px,
+    /* Inicio del blanco semi-transparente */ rgba(255, 255, 255, 0.3) 20px,
+    /* Fin del blanco */ rgba(0, 0, 255, 0.3) 20px,
+    /* Inicio del azul semi-transparente */ rgba(0, 0, 255, 0.3) 30px
+      /* Fin del azul */
+  );
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  color: black; /* Asegúrate de que el texto sea legible */
+  font-family: fantasy;
+  text-shadow: 22px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 #IMAGEN_LOGO {
-  width: 30px;
-  height: 24px;
+  height: 50px;
+  width: 50px;
 }
 
-#parrafito {
-  border: solid
-    radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: rgb(255, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  font-size: 25px;
-  color: white;
-}
-
+/* SOBRE NOSOTROS */
 .content-container {
-  width: 95%;
-  margin: auto;
+  width: 1400px; /* Ancho del div */
+  height: 150px; /* Altura del div */
+  background-color: rgb(254, 254, 127); /* Color de fondo */
+  color: #333; /* Color del texto */
+  border: 3px solid #444; /* Borde con grosor y color */
+  border-radius: 40px; /* Bordes redondeados */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar efecto 3D */
+  display: flex; /* Habilitar flexbox */
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center; /* Centrar contenido verticalmente */
+  font-family: Arial, sans-serif; /* Fuente del texto */
+  font-size: 18px; /* Tamaño de fuente */
+  text-align: auto; /* Alinear texto en el centro */
+  margin: 20px auto; /* Margen superior/inferior y centrado horizontal */
+  padding: 10px; /* Espaciado interno */
+  transition: transform 0.3s, background-color 0.3s; /* Animación */
 }
 
-.carousel-item img {
-  display: block;
-  margin: 0 auto; /* Centra las imágenes horizontalmente */
-  max-width: 100%; /* Asegura que no se desborden del carrusel */
-  height: auto; /* Mantiene la proporción de las imágenes */
+/* Efecto al pasar el ratón */
+.content-container:hover {
+  transform: scale(1.03); /* Aumenta ligeramente el tamaño */
+  background-color: rgb(254, 254, 127); /* Cambia el color de fondo */
 }
 
-.carousel {
-  max-width: 600px; /* Ajusta el ancho máximo del carrusel */
-  margin: 0 auto; /* Centra el carrusel */
+.carousel-inner img {
+  height: 400px; /* Ajustar la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes llenen el espacio sin deformarse */
 }
 
-@media (max-width: 768px) {
-  #carouselExampleCaptions {
-    width: 100%; /* Para dispositivos móviles */
-  }
+.carousel-caption h5 {
+  font-size: 30px;
+  font-weight: bold;
 }
 
-#horarios {
-  margin-bottom: 15px; /* Espacio inferior para el título */
-  margin-top: var(--main-padding); /* Espacio superior unificado */
-  width: 100%; /* Ancho completo para flexibilidad */
-  width: 250px; /* Ajusta el ancho según sea necesario */
-  max-width: 300px; /* Ajusta el ancho según sea necesario */
-  margin: 0; /* Sin márgenes en móviles */
-  margin-top: 20px; /* Espacio en la parte superior para móviles */
+.carousel-caption p {
+  font-size: 18px;
+  color: #f8f9fa;
 }
 
-.container-horario-turno {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.container-horario-turno section {
-  flex: 1;
-  margin-right: 20px;
-}
-
-@media (max-width: 768px) {
-  .container-horario-turno {
-    flex-direction: column;
-  }
-}
-
-#ubicacion {
-  margin: 0 auto; /* Centra la sección */
-  padding: var(--main-padding); /* Espacio interno unificado */
-  max-width: 1000px; /* Ancho máximo para la sección */
-}
-
-.map-responsive {
-  position: relative;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-  height: 0;
-}
-.map-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-footer {
+#tablita {
   text-align: center;
-  margin: 0;
-  background: rgb(255, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  width: 50%;
+}
+
+#tablita th,
+#tablita td {
+  padding: 1px;
+  background-color: rgb(254, 254, 127);
+}
+
+#tablita th {
+  background-color: #999999;
+}
+
+form {
+  background-color: #999999;
+  padding: 15px;
+  border-radius: 10px;
 }
