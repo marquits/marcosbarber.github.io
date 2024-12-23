@@ -14,82 +14,84 @@
   </head>
 
   <body>
-    <header>  
-      <section id="inicio">
+    <div> 
+      <img id="fondo" src="imagenes/fondo.jpg">
+    </div>
+    
+    <header  id="inicio">  
+      <section id="titulo">
         <h1>
           Barberia
           <br />
           Marquits Barber
         </h1>
       </section>
+      <div>
+         <nav class="navbar navbar-expand-lg bg-body-tertiary">
+           <div class="container-fluid">
+               <img id="IMAGEN_LOGO"
+               src="imagenes/polobarber.png"
+               alt="PoloBarber"
+               />
+             <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul id="lista" class="navbar-nav me-auto mb-2 mb-lg-0">
+                 <li class="nav-item">
+                   <a  class="nav-link" aria-current="page" href="#inicio"
+                     >Inicio</a
+                   >
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#Sobre el sitio">Sobre el sitio</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#horario">Horario</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#formulario">Turno</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#ubicacion">Ubicación</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a
+                     class="nav-link dropdown-toggle"
+                     href="#"
+                     role="button"
+                     data-bs-toggle="dropdown"
+                     aria-expanded="false"
+                     >
+                     Contactos
+                   </a>
+                   <ul class="dropdown-menu">
+                     <li>
+                       <a class="dropdown-item" href="https://www.instagram.com/">Instagram</a>
+                     </li>
+                     <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
+                   </ul>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </nav>
+       </div>
     </header>
     
-    <div>
-       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-         <div class="container-fluid">
-             <img id="IMAGEN_LOGO"
-             src="imagenes/polobarber.png"
-             alt="PoloBarber"
-             />
-           <button
-             class="navbar-toggler"
-             type="button"
-             data-bs-toggle="collapse"
-             data-bs-target="#navbarSupportedContent"
-             aria-controls="navbarSupportedContent"
-             aria-expanded="false"
-             aria-label="Toggle navigation"
-             >
-             <span class="navbar-toggler-icon"></span>
-           </button>
-           
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               <li class="nav-item">
-                 <a class="nav-link active" aria-current="page" href="#inicio"
-                   >Inicio</a
-                 >
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#Sobre el sitio">Sobre el sitio</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#horario">Horario</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#formulario">Turno</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#ubicacion">Ubicación</a>
-               </li>
-               <li class="nav-item dropdown">
-                 <a
-                   class="nav-link dropdown-toggle"
-                   href="#"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false"
-                   >
-                   Contactos
-                 </a>
-                 <ul class="dropdown-menu">
-                   <li>
-                     <a class="dropdown-item" href="https://www.instagram.com/">Instagram</a>
-                   </li>
-                   <li><a class="dropdown-item" href="https://www.facebook.com">Facebook</a></li>
-                 </ul>
-               </li>
-             </ul>
-           </div>
-         </div>
-       </nav>
-     </div>
     
     <section id="Sobre el sitio">
-      <div class="content-container">
-        <h2>Sobre el sitio</h2>
-        <p>En Marcos Barber, transformamos cada visita en una experiencia única, ¡pensada solo para ti! ¿Buscas un corte de pelo con estilo y precisión? Ya sea que prefieras un corte con diseño, coloración o un estilo clásico, estamos aquí para hacer realidad tu visión. No te conformes con menos, confía en nosotros para darle vida a tu look.
-
+      <div class="content-container col-md-6 d-flex justify-content-start align-items-center">
+        <p>En Marquits Barber, transformamos cada visita en una experiencia única, ¡pensada solo para ti! ¿Buscas un corte de pelo con estilo y precisión? Ya sea que prefieras un corte con diseño, coloración o un estilo clásico, estamos aquí para hacer realidad tu visión. No te conformes con menos, confía en nosotros para darle vida a tu look.
           ¿Listo para un cambio? ¡Explora nuestras opciones y reserva tu turno hoy mismo! Conoce sobre nuestros precios aquí".</p>
       </div>
     </section>
@@ -97,7 +99,7 @@
     <section>
       <!--Bootstrap Flexbox para centrar en otras pantallas-->
       <div class="d-flex justify-content-center align-items-center flex-wrap">
-        <div id="carouselExampleCaptions" class="carousel slide w-75">
+        <div id="carouselExampleCaptions" class="carousel slide w-70">
         
           <div class="carousel-indicators">
           <button
@@ -178,54 +180,46 @@
     </section>
     
 <hr>
-    <div class="container-horario-turno">
-      <section id="horario" class="flex-fill me-3">
+    <!--<div class="container-horario-turno">
+      <section id="horario" class="flex-fill me-3"> -->
         <h2>Horario</h2>
         <hr>
 
-        <table id="tablita">
-          <caption> HORARIOS </caption>
-          <tr>
-            <th>
-              Martes:
-            </th>
-            <td>
-              14:00hs - 22:00hs
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Miercoles:
-            </th>
-            <td>
-              14:00hs - 22:00hs
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Jueves:
-            </th>
-            <td>
-              14:00hs - 22:00hs
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Viernes:
-            </th>
-            <td>
-              14:00hs - 22:00hs
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Sábado:
-            </th>
-            <td>
-              09:00hs - 17:00hs
-            </td>
-          </tr>
-        </table>
+        <div class="container mt-5">
+          <div class="row align-items-start">
+            <!-- Sección de la tabla -->
+            <div class="col-md-6 col-12 mb-4">
+              <table id="tablita" class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Martes</td>
+                    <td>14:00hs - 22:00hs</td>
+                  </tr>
+                  <tr>
+                    <td>Miércoles</td>
+                    <td>14:00hs - 22:00hs</td>
+                  </tr>
+                  <tr>
+                    <td>Jueves</td>
+                    <td>14:00hs - 22:00hs</td>
+                  </tr>
+                  <tr>
+                    <td>Viernes</td>
+                    <td>14:00hs - 22:00hs</td>
+                  </tr>
+                  <tr>
+                    <td>Sábado</td>
+                    <td>09:00hs - 17:00hs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
         <!--<ul class="list-group">
           <li class="list-group-item">Martes: 14:00hs - 22:00hs</li>
           <li class="list-group-item">Miércoles: 14:00hs - 22:00hs</li>
@@ -238,7 +232,8 @@
       <section id="formulario" class="flex-fill ms-3">
         <h2>Solicitud de Turno</h2>
         <hr>
-        <form>
+        <div class="col-md-6 col-12">
+        <form id="miFormulario">
           <div class="mb-3">
             <label for="nombre" class="form-label" >Nombre y Apellido</label>
             <input
@@ -295,7 +290,7 @@
       <div class="map-responsive">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434.49071093786665!2d-66.82635288022564!3d-29.401729900442724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9427db9ce0da479f%3A0x7e108b1970a4021a!2sMarcos%20Barber!5e0!3m2!1ses-419!2sar!4v1727839995604!5m2!1ses-419!2sar"
-          width="1400"
+          width="1000"
           height="400"
           style="border: 0"
           allowfullscreen=""
